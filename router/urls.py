@@ -6,7 +6,7 @@ ur = APIRouter()
 
 
 @ur.post("/create")
-def add_ul(data: URLInput, token=Header()):
+def add_url(data: URLInput, token=Header()):
     return URL(**add_url(data.dict(), token)).dict(exclude={'referrals', 'account_id'})
 
 
