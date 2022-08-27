@@ -16,12 +16,12 @@ def main():
 
 
 @app.get("/r/{referral_id}")
-def handle(referral_id: str):
+def handle_route(referral_id: str):
     return RedirectResponse(fetch_url(referral_id))
 
 # "C:\Users\Ishan Miitra\.deta\bin\deta.exe"
 
 
 @app.get("/R/{referral_id}")
-def handle(referral_id: str):
+def handle_route(referral_id: str):
     return RedirectResponse(fetch_url(referral_id))

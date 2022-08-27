@@ -6,19 +6,19 @@ ur = APIRouter()
 
 
 @ur.post("/create")
-def add_url(data: URLInput, token=Header()):
+def add_url_route(data: URLInput, token=Header()):
     return URL(**add_url(data.dict(), token)).dict(exclude={'referrals', 'account_id'})
 
 
 @ur.put("/update")
-def update_url(data: URLEdit, token=Header()):
+def update_url_route(data: URLEdit, token=Header()):
     e = edit_url(data.dict(), token)
     if e == 1:
         return {"sucess": True}
 
 
 @ur.delete("/delete")
-def delete_url(data: URLDelete, token=Header()):
+def delete_url_route(data: URLDelete, token=Header()):
     d = del_url(data.dict(), token)
     if d == 1:
         return {"sucess": True}

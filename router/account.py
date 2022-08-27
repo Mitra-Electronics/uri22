@@ -7,28 +7,28 @@ ar = APIRouter()
 
 
 @ar.post("/create")
-def create_account(data: AccInput):
+def create_account_route(data: AccInput):
     return {"token": create_acc(data.dict())}
 
 
 @ar.post("/login")
-def login_account(data: Login):
+def login_account_route(data: Login):
     return {"token": login_acc(data.email, data.password)}
 
 
 @ar.post("/activate")
-def activate_account(token: str):
+def activate_account_route(token: str):
     return {"activated":True}
 
 
 @ar.post("/get")
-def get_account(token=Header()):
+def get_account_route(token=Header()):
     d = Accounts(**get_acc(token.token)).dict()
     d["referrals_created"] = get_acc_urls(d["account_id"])
     return d
 
 
 @ar.delete("/delete")
-def delete_account(token=Header()):
+def delete_account_route(token=Header()):
     del_acc(token.token)
     return {"deleted": True}
