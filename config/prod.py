@@ -8,7 +8,7 @@ MONGODB_URL = environ["MONGODB_URL"]
 PEPPER = environ["PEPPER"]
 SCHEMES = environ["SCHEMES"]
 
-# JWT
+# JWT 
 SECRET_KEY = environ["SECRET_KEY"]
 ALGORITHM = environ["ALGORITHM"]
 TOKEN_TIMEOUT = timedelta(minutes=int(environ["TOKEN_TIMEOUT"]))
