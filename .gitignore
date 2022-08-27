@@ -1,0 +1,9 @@
+.venv
+dev.py
+.web
+__pycache__
+.vscode
+.idea
+.mypy_cache
+*.pyc
+*.env
