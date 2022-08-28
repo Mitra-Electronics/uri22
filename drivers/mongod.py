@@ -10,7 +10,7 @@ if (Path(__file__).parent.parent / ".web").exists():
     from config.dev import MONGODB_URL
 else:
     from config.prod import MONGODB_URL
-from crypto import gen_id, hash_password, verify_password
+from drivers.cryptod import gen_id, hash_password, verify_password
 from drivers.jwd import create_access_token, decode_access_token
 
 client = MongoClient(MONGODB_URL, server_api=ServerApi("1"))
