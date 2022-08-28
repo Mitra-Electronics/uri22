@@ -4,7 +4,7 @@ from secrets import token_bytes
 
 from passlib.context import CryptContext
 
-if (Path(__file__).parent / ".web").exists():
+if (Path(__file__).parent.parent / ".web").exists():
     from config.dev import PEPPER, SCHEMES
 else:
     from config.prod import PEPPER, SCHEMES
