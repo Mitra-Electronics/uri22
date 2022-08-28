@@ -9,7 +9,6 @@ if (Path(__file__).parent.parent / ".web").exists():
 else:
     from config.prod import ALGORITHM, SECRET_KEY, TOKEN_TIMEOUT
 
-
 def create_access_token(data: dict):
     to_encode = data.copy()
     expire = datetime.utcnow() + TOKEN_TIMEOUT
