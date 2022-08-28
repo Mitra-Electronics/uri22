@@ -8,5 +8,5 @@ dr = APIRouter()
 
 @dr.post("/")
 def downloader_route(url: UR):
-    if 'youtube.com' in url.url.host or 'youtu.be' in url.url.host:
-        return StreamingResponse(yt_download(url.url))
+    #if 'youtube.com' in url.url.host or 'youtu.be' in url.url.host:
+    return StreamingResponse(yt_download(url.url))
