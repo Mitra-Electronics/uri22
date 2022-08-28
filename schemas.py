@@ -37,3 +37,6 @@ class URL(URLInput):
     account_id: str
     is_active: bool
     referrals: int
+
+class UR(BaseModel):
+    url: AnyUrl
