@@ -6,7 +6,7 @@ colorama==0.4.5
 dnspython==2.2.1
 ecdsa==0.18.0
 email-validator==1.2.1
-fastapi==0.81.0
+fastapi==0.88.0
 h11==0.13.0
 idna==3.3
 passlib==1.7.4
